@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+.env
+# Ignore build folder
+/dist
+/build
