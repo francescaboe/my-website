@@ -1,6 +1,6 @@
 import React from 'react';
 
 const App = () => {
-  return <div>Hello, world!</div>;
+    return <div>Hello, world!</div>;
 };
 export default App;

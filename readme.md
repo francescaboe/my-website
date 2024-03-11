@@ -2,6 +2,7 @@ React project without CRA
 
 see https://medium.com/@claude.ando/setting-up-a-react-project-without-create-react-app-6ff7fea9ca51
 
+see for ts: https://dev.to/alekseiberezkin/setting-up-react-typescript-app-without-create-react-app-oph
 - package.json
 - react and reactDom
 - babel (devDependencies) - interpreter
@@ -10,8 +11,8 @@ see https://medium.com/@claude.ando/setting-up-a-react-project-without-create-re
   - ├── public/
         ├── index.html
     ├── src/
-        ├── App.js
-        ├── index.js
+        ├── App.tsx
+        ├── index.tsx
     ├── .babelrc
     ├── package.json
     ├── webpack.config.js
