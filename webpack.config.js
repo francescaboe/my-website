@@ -1,5 +1,4 @@
 // This configuration file tells Webpack how to process and bundle your project files.
-// TODO: add absolute path
 const prod = process.env.NODE_ENV === 'production';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,13 +12,13 @@ module.exports = {
   entry: './src/index.tsx',
   // Defines where the bundled files will be saved.
   output: {
-    path: __dirname + '/dist/',
+    path: path.resolve(__dirname, 'dist'), // Use path.resolve for absolute paths
   },
   module: {
     // Determines how different file types should be processed.
     rules: [
       {
-        test: /\.(ts|tsx)$/, // test: /\.(ts|tsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         // // Specifies which file extensions Webpack should resolve.
         resolve: {
@@ -45,9 +44,15 @@ module.exports = {
   // Sets up the development server configuration.
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'dist'), // Use path.resolve for absolute paths
     },
     hot: true,
     open: true,
+  },
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components'),
+      utils: path.resolve(__dirname, 'src/utils'),
+    },
   },
 };

@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "components": [
+        "./components"
+      ],
+      "utils": [
+        "./utils"
+      ]
+    },
     // flag fixes default and namespace imports from CommonJS to TS.
     "esModuleInterop": true,
     // tells TS how to treat JSX files
