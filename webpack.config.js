@@ -7,7 +7,8 @@ const path = require('path');
 
 module.exports = {
   // Sets the mode for the build process (development or production).
-  mode: prod ? 'production' : 'development',
+  //mode: prod ? 'production' : 'development',
+  mode: 'production',
   // Specifies the entry point for your application.
   entry: './src/index.tsx',
   // Defines where the bundled files will be saved.
