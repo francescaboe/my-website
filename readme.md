@@ -8,21 +8,31 @@ see for ts: https://dev.to/alekseiberezkin/setting-up-react-typescript-app-witho
 - babel (devDependencies) - interpreter
 - webpack configurations - bundler to creat optimized output file
 - structure:
-  - ├── public/
+  ```
+  ├── public/
         ├── index.html
-    ├── src/
+  ├── src/
         ├── App.tsx
         ├── index.tsx
-    ├── .babelrc
-    ├── package.json
-    ├── webpack.config.js
+  ├── .babelrc
+  ├── package.json
+  ├── webpack.config.js
+  ```
 - add start and build scripts to package.json
 - npm start : app runs http://localhost:8080/
 - add .gitignore
 
 
-TODO
--add ts
--add absolute path
--add prettier and eslint
--add dark mode (francesca - darkchesca)
+// TODO
+
+[x] add ts
+
+[x] add absolute path
+
+[x] add prettier and eslint
+
+[x] add tailwind
+
+[ ] add dark mode (francesca - darkchesca)
+
+[ ] add testing ?
