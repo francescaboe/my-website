@@ -31,7 +31,7 @@ function RockPaperScissors() {
   const [player1, setPlayer1] = React.useState<string>(IDLE_PLAYERS.player1);
   const [player2, setPlayer2] = React.useState<string>(IDLE_PLAYERS.player2);
   const [winner, setWinner] = React.useState<string | undefined>('');
-  const [score, setScore] = React.useState({ player1: 0, player2: 0 });
+  //const [score, setScore] = React.useState({ player1: 0, player2: 0 });
   const [pulse, setPulse] = React.useState(false);
 
   const isIdle = player1 === IDLE_PLAYERS.player1 && player2 === IDLE_PLAYERS.player2;
@@ -39,7 +39,7 @@ function RockPaperScissors() {
   const handleReset = () => {
     setPlayer1(IDLE_PLAYERS.player1);
     setPlayer2(IDLE_PLAYERS.player2);
-    setScore(initialScore);
+    //setScore(initialScore);
   };
 
   const handlePlayer2Click = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -70,10 +70,10 @@ function RockPaperScissors() {
     if (player2 === outcomes[player1]) {
       setWinner(TEXT.me);
       // TODO WRONG!
-      setScore((prevState) => ({ ...prevState, player1: prevState.player1++ }));
+      //setScore((prevState) => ({ ...prevState, player1: prevState.player1++ }));
     } else {
       setWinner(TEXT.you);
-      setScore((prevState) => ({ ...prevState, player2: prevState.player2++ }));
+      //setScore((prevState) => ({ ...prevState, player2: prevState.player2++ }));
     }
   }, [player1, player2, outcomes]);
 
@@ -85,9 +85,9 @@ function RockPaperScissors() {
           <p>{player1}</p>
         </div>
         <div className="winner">
-          <p>
-            {TEXT.score} {score.player1} - {score.player2}
-          </p>
+          {/*<p>*/}
+          {/*  {TEXT.score} {score.player1} - {score.player2}*/}
+          {/*</p>*/}
           {pulse ? '...' : <p>{winner}</p>}
         </div>
         <div className={`player ${isIdle && 'rotate-90'} ${pulse && 'pulsate'}`}>
