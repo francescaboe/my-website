@@ -55,7 +55,7 @@ function RockPaperScissors() {
       const randomIndex = Math.floor(Math.random() * options.length);
       const randomOption = options[randomIndex];
       setPlayer1(randomOption);
-    }, 3000);
+    }, 2000);
   };
 
   React.useEffect(() => {
