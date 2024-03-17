@@ -1,0 +1,103 @@
+.my-avatar-container {
+    width: 85px;
+    height: 85px;
+    background-color: #cbf1f1;
+    border-radius: 50%;
+    position: relative;
+}
+
+.my-hair {
+    width: 55px;
+    height: 40px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid #343a40;
+    z-index: 0;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.my-face {
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 17px;
+}
+
+.my-ear {
+    width: 57px;
+    height: 7px;
+    background-color: bisque;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 14px;
+}
+
+.my-brows {
+    display: flex;
+    justify-content: space-around;
+}
+
+.my-brow {
+    width: 10px;
+    height: 2px;
+    background-color: saddlebrown;
+}
+
+.my-eyes {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.my-eye {
+    background-color: whitesmoke;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-eye::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.my-nose {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid #b79f81;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    left: 20px;
+    top: 27px;
+}
+
+.my-mouth {
+    width: 10px;
+    height: 2px;
+    background-color: #bb4d4d;
+    transform: rotate(20deg);
+    margin: 5px 15px;
+    border-radius: 45%;
+}
+
+.my-body {
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent;
+    border-bottom: 15px solid #252628;
+    margin-top: 12px;
+
+}
