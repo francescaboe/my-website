@@ -1,7 +1,7 @@
 .my-avatar-container {
     width: 85px;
     height: 85px;
-    background-color: #cbf1f1;
+    background-color: rgb(99, 204, 204);
     border-radius: 50%;
     position: relative;
 }
@@ -11,11 +11,12 @@
     height: 40px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 50px solid #343a40;
+    border-bottom: 50px solid #281c14;
     z-index: 0;
     position: absolute;
     top: 12px;
     left: 15px;
+    box-shadow: 0 5px 2px -5px rgba(0, 0, 0, 0.9)
 }
 
 .my-face {
@@ -26,6 +27,7 @@
     position: absolute;
     top: 15px;
     left: 17px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);
 }
 
 .my-ear {
@@ -36,6 +38,17 @@
     position: absolute;
     top: 35px;
     left: 14px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.19);
+}
+.my-earring {
+    width: 52px;
+    height: 2px;
+    background-color: #7c7c7b;
+    border-radius: 25%;
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.19);
 }
 
 .my-brows {
@@ -45,24 +58,25 @@
 
 .my-brow {
     width: 10px;
-    height: 2px;
-    background-color: saddlebrown;
+    height: 3px;
+    background-color: rgb(40, 28, 20);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.19);
 }
 
 .my-eyes {
     display: flex;
-    margin: auto;
-    justify-content: space-around;
+   justify-content: space-between;
 }
 
 .my-eye {
     background-color: whitesmoke;
-    width: 40px;
+    width: 50%;
     height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);
 }
 
 .my-eye::after {
@@ -82,16 +96,16 @@
     border-bottom: 5px solid transparent;
     position: absolute;
     left: 20px;
-    top: 27px;
+    top: 28px;
 }
 
 .my-mouth {
     width: 10px;
     height: 2px;
     background-color: #bb4d4d;
-    transform: rotate(20deg);
+    transform: rotate(200deg);
     margin: 5px 15px;
-    border-radius: 45%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 
 .my-body {
@@ -99,5 +113,5 @@
     border-right: 23px solid transparent;
     border-bottom: 15px solid #252628;
     margin-top: 12px;
-
+    box-shadow: 0 5px 2px -5px rgba(0, 0, 0, 0.9);
 }

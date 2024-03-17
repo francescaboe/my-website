@@ -5,6 +5,7 @@ function MyAvatar() {
     <div className="my-avatar-container">
       <div className="my-hair"></div>
       <div className="my-ear"></div>
+      <div className="my-earring"></div>
       <div className="my-face">
         <div className="my-brows">
           <div className="my-brow"></div>
