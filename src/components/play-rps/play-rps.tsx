@@ -77,19 +77,21 @@ function PlayRps() {
           <h1>Play 🪨 📄 ✂️</h1>
         </div>
         {/*BACK*/}
-        {/*<div className="absolute my-rotate-y-180 backface-hidden items-center w-full h-full bg-gray-100 overflow-hidden">*/}
-        <div className="absolute my-rotate-y-180 backface-hidden items-center w-full h-full bg-gray-100 overflow-hidden">
+        <div className="absolute my-rotate-y-180 backface-hidden items-center w-full h-full bg-gray-100 overflow-hidden flex justify-center flex-col">
+          {/*<div className="absolute w-full h-full bg-gray-100 overflow-hidden flex justify-center flex-col items-center">*/}
           <div className="flex justify-center flex-col items-center">
-            <div className="players">
-              <div className={`player ${isIdle && 'rotate-90'} ${pulse && 'pulsate'}`}>
+            <div className="flex flex-col items-center">
+              <div className={`${isIdle && 'rotate-90'} ${pulse && 'animate-pulsate'}`}>
                 <p>{player1}</p>
               </div>
-              <div className="winner">{pulse ? '...' : <p>{winner}</p>}</div>
-              <div className={`player ${isIdle && 'rotate-90'} ${pulse && 'pulsate'}`}>
+              <div className="">{pulse ? '...' : <p>{winner}</p>}</div>
+              <div
+                className={`${isIdle && 'rotate-90'} ${pulse && 'animate-[pulsate_600ms_ease-in-out_3]'}`}
+              >
                 <p>{player2}</p>
               </div>
             </div>
-            <div className="options">
+            <div>
               {options.map((o) => (
                 <button disabled={pulse} name={o} key={o} onClick={handlePlayer2Click}>
                   {o}
