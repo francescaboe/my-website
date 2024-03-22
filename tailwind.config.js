@@ -102,6 +102,10 @@ module.exports = {
         pulsate: {
           '0%, 100%': { transform: 'scale(1) rotate(90deg)' },
         '50%': { transform: 'scale(1.5) rotate(90deg)' }
+        },
+        grow: {
+          '0%': { transform: 'scale(1.0)' },
+          '100%': { transform: 'scale(1.2)' }
         }
       },
       animation: {

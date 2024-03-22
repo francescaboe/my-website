@@ -70,7 +70,7 @@ function PlayRps() {
   }, [player1, player2, outcomes]);
 
   return (
-    <div className="w-[15rem] h-[22rem] bg-transparent cursor-pointer group perspective">
+    <div className="w-[15rem] h-[22rem] text-2xl bg-transparent cursor-pointer group perspective">
       <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
         {/*FRONT*/}
         <div className="absolute backface-hidden border-2 w-full h-full flex justify-center items-center">
@@ -78,25 +78,48 @@ function PlayRps() {
         </div>
         {/*BACK*/}
         <div className="absolute my-rotate-y-180 backface-hidden items-center w-full h-full bg-gray-100 overflow-hidden flex justify-center flex-col">
-          {/*<div className="absolute w-full h-full bg-gray-100 overflow-hidden flex justify-center flex-col items-center">*/}
-          <div className="flex justify-center flex-col items-center">
-            <div className="flex flex-col items-center">
-              <div className={`${isIdle && 'rotate-90'} ${pulse && 'animate-pulsate'}`}>
-                <p>{player1}</p>
+          <div className="absolute w-full h-full bg-gray-100 overflow-hidden flex justify-center flex-col items-center">
+            <div className="flex justify-center flex-col items-center">
+              <div className="flex flex-col items-center">
+                {/*PLAYER 1*/}
+                <div className="mb-8 flex justify-around">
+                  {options.map((o) => (
+                    <button
+                      className="bg-teal-700 m-2 p-2 text-transparent text-4xl shadow shadow-gray-700"
+                      disabled
+                      name={o}
+                      key={o}
+                    >
+                      {o}
+                    </button>
+                  ))}
+                </div>
+                <div
+                  className={` text-4xl ${isIdle ? 'rotate-90' : 'rotate-180'} ${pulse && 'animate-pulsate'}`}
+                >
+                  <span>{player1}</span>
+                </div>
+                {/*RESULT*/}
+                <div className="m-2">{pulse ? '...' : <p>{winner}</p>}</div>
+                {/*PLAYER 2*/}
+                <div className={` text-4xl ${isIdle && 'rotate-90'} ${pulse && 'animate-pulsate'}`}>
+                  <span>{player2}</span>
+                </div>
               </div>
-              <div className="">{pulse ? '...' : <p>{winner}</p>}</div>
-              <div
-                className={`${isIdle && 'rotate-90'} ${pulse && 'animate-[pulsate_600ms_ease-in-out_3]'}`}
-              >
-                <p>{player2}</p>
+              {/*PLAYER 2 options*/}
+              <div className="mt-8 flex justify-around">
+                {options.map((o) => (
+                  <button
+                    className="bg-teal-700 m-2 p-2 text-4xl shadow shadow-gray-700 hover:bg-teal-600 hover:animate-[grow_500ms_forwards]"
+                    disabled={pulse}
+                    name={o}
+                    key={o}
+                    onClick={handlePlayer2Click}
+                  >
+                    {o}
+                  </button>
+                ))}
               </div>
-            </div>
-            <div>
-              {options.map((o) => (
-                <button disabled={pulse} name={o} key={o} onClick={handlePlayer2Click}>
-                  {o}
-                </button>
-              ))}
             </div>
           </div>
         </div>
