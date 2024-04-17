@@ -1,6 +1,7 @@
 import React from 'react';
 import MyAvatar from 'components/my-avatar';
 import PlayRps from 'components/play-rps';
+import OncePopupATime from 'components/once-popup-a-time';
 const App = () => {
   return (
     <div className="flex p-6 font-mono">
@@ -8,24 +9,18 @@ const App = () => {
         {/*HEADER*/}
         <div className="relative flex flex-wrap items-baseline pb-6 before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
           <h1 className="relative w-full flex-none mb-2 text-2xl font-semibold text-white">
-            header text
+            landscape css
           </h1>
         </div>
         <div className="absolute top-5">
           <MyAvatar />
-        </div>
-        {/*PLAY*/}
-        <div className="flex items-baseline justify-center my-6">
-          <PlayRps />
         </div>
         {/*ABOUT*/}
         <div className="flex items-baseline my-6 border-b-4">
           <h1 className="font-bold uppercase">About</h1>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur corporis doloribus
-          dolorum eaque, esse, explicabo laboriosam laborum maiores mollitia neque nostrum nulla
-          porro possimus quo, sed sit totam vero voluptate!
+          Hey, I'm Francesca. I'm a frontend developer based in Berlin. I build stuff with React.
         </p>
         {/*EXPERIMENTS*/}
         <div className="flex items-baseline my-6 border-b-4">
@@ -36,20 +31,23 @@ const App = () => {
             className="px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 bg-amber-200 text-slate-900"
             type="submit"
           >
-            Experiment 1
+            Experiment 1: Rock, Paper, Scissors
           </button>
           <button
             className="px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 bg-amber-700 text-slate-900"
             type="button"
           >
-            Experiment 2
+            Experiment 2: Once popup a time
           </button>
-          <button
-            className="px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 bg-amber-800 text-slate-900"
-            type="button"
-          >
-            Experiment 3
-          </button>
+        </div>
+        {/*TODO: add as accordion?*/}
+        {/*PLAY*/}
+        <div className="flex items-baseline justify-center my-6">
+          <PlayRps />
+        </div>
+        {/*ONCE POPUP*/}
+        <div className="flex items-baseline justify-center my-6">
+          <OncePopupATime />
         </div>
         {/*LIKE BUTTON*/}
         {/*<button

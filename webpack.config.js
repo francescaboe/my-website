@@ -22,7 +22,7 @@ module.exports = {
         exclude: /node_modules/,
         // // Specifies which file extensions Webpack should resolve.
         resolve: {
-          extensions: ['.ts', '.tsx', '.js', '.json'],
+          extensions: ['.ts', '.tsx', '.js', '.json', '.png'],
         },
         use: 'ts-loader',
       },
