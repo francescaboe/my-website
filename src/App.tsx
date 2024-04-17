@@ -42,9 +42,7 @@ const App = () => {
         </div>
         {/*TODO: add as accordion?*/}
         {/*PLAY*/}
-        <div className="flex items-baseline justify-center my-6">
-          <PlayRps />
-        </div>
+        <div className="flex items-baseline justify-center my-6">{/*<PlayRps />*/}</div>
         {/*ONCE POPUP*/}
         <div className="flex items-baseline justify-center my-6">
           <OncePopupATime />
