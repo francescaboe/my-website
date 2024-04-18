@@ -21,6 +21,8 @@ const App = () => {
         </div>
         <p>
           Hey, I'm Francesca. I'm a frontend developer based in Berlin. I build stuff with React.
+          Buzzwords I'm into include: Typescript, Tailwind, continuous learning, linting [todo:
+          accessibility, testing, figma ux]
         </p>
         {/*EXPERIMENTS*/}
         <div className="flex items-baseline my-6 border-b-4">
