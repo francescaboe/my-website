@@ -26,14 +26,14 @@ const App = () => {
         </p>
         {/*EXPERIMENTS*/}
         <div className="flex items-baseline my-6 border-b-4">
-          <h1 className="font-bold uppercase">Experiments</h1>
+          <h1 className="font-bold uppercase">Sometimes inappropriate usages of code</h1>
         </div>
         <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
           <button className="px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 bg-amber-200 text-slate-900">
             Experiment 1: Rock, Paper, Scissors
           </button>
           <button className="px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 bg-amber-700 text-slate-900">
-            Experiment 2: Once popup a time
+            Experiment 2: Once popup a time with Tailwind
           </button>
         </div>
         {/*TODO: add as accordion?*/}
@@ -42,6 +42,9 @@ const App = () => {
         {/*ONCE POPUP*/}
         <div className="flex items-baseline justify-center my-6">
           <OncePopupATime />
+        </div>
+        <div className="flex items-baseline justify-center my-6">
+          <PlayRps />
         </div>
         {/*LIKE BUTTON*/}
         {/*<button

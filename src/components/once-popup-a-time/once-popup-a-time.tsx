@@ -40,12 +40,34 @@ function OncePopupATime() {
           {'<'}
         </button>
         {/*FOREST CONTAINER*/}
-        <div className="bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center space-x-8">
-          {trees}
-
-          <div className={`${STORY[storyIndex].styles.princess}`}>princess</div>
-          <div className={`text-7xl ${STORY[storyIndex].styles.dragon}`}>dragon</div>
-          <div className={` text-9xl ${STORY[storyIndex].styles.prince}`}>prince</div>
+        <div
+          className="forest
+        bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center"
+        >
+          <div className="flex justify-center space-x-8">{trees}</div>
+          <div
+            className={`princess
+            relative
+           ${STORY[storyIndex].styles.princess}`}
+          >
+            <div
+              className="crown
+            w-[50px] h-[20px] bg-amber-200
+            "
+            ></div>
+            <div
+              className="head
+            w-[50px] h-[50px] bg-pink-200 rounded-3xl
+            "
+            ></div>
+            <div
+              className="princess-body
+            h-0 w-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[85px] border-red-800 absolute left-[-34px]
+            "
+            ></div>
+          </div>
+          {/*<div className={`text-7xl ${STORY[storyIndex].styles.dragon}`}>dragon</div>
+          <div className={` text-9xl ${STORY[storyIndex].styles.prince}`}>prince</div>*/}
         </div>
         <button
           name={DIRECTIONS.forward}
