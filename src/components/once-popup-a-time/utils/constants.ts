@@ -9,8 +9,8 @@ export const STORY: {
     styles: {
       forest: '',
       princess: '',
-      dragon: 'hidden',
-      prince: 'hidden',
+      dragon: '',
+      prince: '',
     },
   },
   {

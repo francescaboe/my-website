@@ -45,7 +45,7 @@ function OncePopupATime() {
         bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center"
         >
           <div className="flex justify-center space-x-8">{trees}</div>
-          <div
+          {/*<div
             className={`princess
             relative
            ${STORY[storyIndex].styles.princess}`}
@@ -65,9 +65,47 @@ function OncePopupATime() {
             h-0 w-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[85px] border-red-800 absolute left-[-34px]
             "
             ></div>
+          </div>*/}
+          <div
+            className={`dragon
+           relative 
+           ${STORY[storyIndex].styles.dragon}`}
+          >
+            <div
+              className="flames
+            absolute top-0 left-4 w-10 h-10 bg-red-500 rounded-full border-[10px] border-orange-500 animate-windyLeaves"
+            ></div>
+            <div
+              className="dragon-head
+            absolute top-9 w-0 h-0 border-r-[80px] border-r-transparent border-b-[70px] border-cyan-950
+            "
+            ></div>
+            <div
+              className="dragon-body
+            absolute top-[7rem] left-[-119px] border-l-[120px] border-l-transparent border-b-[110px] border-cyan-950
+            "
+            ></div>
           </div>
-          {/*<div className={`text-7xl ${STORY[storyIndex].styles.dragon}`}>dragon</div>
-          <div className={` text-9xl ${STORY[storyIndex].styles.prince}`}>prince</div>*/}
+          {/*<div
+            className={`prince 
+          relative ${STORY[storyIndex].styles.prince}`}
+          >
+            <div
+              className="prince-crown
+            w-[50px] h-[20px] bg-amber-300
+            "
+            ></div>
+            <div
+              className="prince-head
+            w-[50px] h-[50px] bg-pink-100 rounded-2xl
+            "
+            ></div>
+            <div
+              className="prince-body
+            h-0 w-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[90px] border-blue-800 absolute left-[-15px]
+            "
+            ></div>
+          </div>*/}
         </div>
         <button
           name={DIRECTIONS.forward}
