@@ -45,7 +45,7 @@ function OncePopupATime() {
         bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center"
         >
           <div className="flex justify-center space-x-8">{trees}</div>
-          {/*<div
+          <div
             className={`princess
             relative
            ${STORY[storyIndex].styles.princess}`}
@@ -65,7 +65,7 @@ function OncePopupATime() {
             h-0 w-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[85px] border-red-800 absolute left-[-34px]
             "
             ></div>
-          </div>*/}
+          </div>
           <div
             className={`dragon
            relative 
@@ -86,7 +86,7 @@ function OncePopupATime() {
             "
             ></div>
           </div>
-          {/*<div
+          <div
             className={`prince 
           relative ${STORY[storyIndex].styles.prince}`}
           >
@@ -105,7 +105,7 @@ function OncePopupATime() {
             h-0 w-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[90px] border-blue-800 absolute left-[-15px]
             "
             ></div>
-          </div>*/}
+          </div>
         </div>
         <button
           name={DIRECTIONS.forward}

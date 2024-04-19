@@ -8,9 +8,9 @@ export const STORY: {
     content: 'Hover on the image to see animation. \nPress next to turn the page',
     styles: {
       forest: '',
-      princess: '',
-      dragon: '',
-      prince: '',
+      princess: 'hidden',
+      dragon: 'hidden',
+      prince: 'hidden',
     },
   },
   {
@@ -18,10 +18,10 @@ export const STORY: {
     content:
       'In the heart of an enchanted forest, a lonely princess awaits, surrounded by the whispering trees',
     styles: {
-      forest: '',
-      princess: '',
-      dragon: '',
-      prince: '',
+      forest: '', // add birds on hover?
+      princess: '', // show princess, animate on hover (smile or color change, or singing)
+      dragon: 'hidden',
+      prince: 'hidden',
     },
   },
   {
@@ -32,7 +32,7 @@ export const STORY: {
       forest: '',
       princess: '',
       dragon: '',
-      prince: '',
+      prince: 'hidden',
     },
   },
   {
@@ -52,7 +52,7 @@ export const STORY: {
       'But as the prince approaches, the princess reveals a dark secret: she desires no rescue. In a shocking twist, she turns the tables, vanquishing the prince and choosing an new path—a union with the dragon.',
     styles: {
       forest: '',
-      princess: '',
+      princess: '', // add sword with :after
       dragon: '',
       prince: '',
     },
@@ -64,7 +64,7 @@ export const STORY: {
       forest: '',
       princess: '',
       dragon: '',
-      prince: '',
+      prince: 'hidden',
     },
   },
 ];
