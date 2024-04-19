@@ -8,13 +8,13 @@ const DIRECTIONS = {
 
 const Tree: React.FC = () => (
   <div className="flex flex-col items-center">
-    <div className="border-l-15 border-r-15 border-b-20 border-green-600 w-0 h-0 mt-10 bg-cyan-950"></div>
+    <div className="h-0 w-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-b-[75px] border-green-600 mt-10 animate-windyLeaves"></div>
     <div className="w-3 h-20 bg-yellow-900"></div>
   </div>
 );
 
 function OncePopupATime() {
-  const trees = Array.from({ length: 5 }, (_, index) => <Tree key={index} />);
+  const trees = Array.from({ length: 3 }, (_, index) => <Tree key={index} />);
   const [storyIndex, setStoryIndex] = React.useState(0);
   const handleDirectionClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     const direction = e.currentTarget.name;
@@ -39,7 +39,14 @@ function OncePopupATime() {
         >
           {'<'}
         </button>
-        <div className="bg-blue-200 w-96 h-48 flex justify-center space-x-8">{trees}</div>
+        {/*FOREST CONTAINER*/}
+        <div className="bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center space-x-8">
+          {trees}
+
+          <div className={`${STORY[storyIndex].styles.princess}`}>princess</div>
+          <div className={`text-7xl ${STORY[storyIndex].styles.dragon}`}>dragon</div>
+          <div className={` text-9xl ${STORY[storyIndex].styles.prince}`}>prince</div>
+        </div>
         <button
           name={DIRECTIONS.forward}
           onClick={handleDirectionClick}

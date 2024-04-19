@@ -106,11 +106,16 @@ module.exports = {
         grow: {
           '0%': { transform: 'scale(1.0)' },
           '100%': { transform: 'scale(1.2)' }
+        },
+        windyLeaves: {
+          '0%': {transform: 'translateX(5%) scaleY(1)'},
+          '100%': { transform: 'translateX(-5%) scaleY(1.1)' }
         }
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        pulsate: 'pulsate 600ms ease-in-out 3'
+        pulsate: 'pulsate 600ms ease-in-out 3',
+        windyLeaves: 'windyLeaves 1s infinite alternate'
       }
     },
   },
