@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, useEffect } from 'react';
 import { STORY } from './utils/constants';
 
 const DIRECTIONS = {
@@ -16,8 +16,8 @@ const Tree: React.FC = () => (
 function OncePopupATime() {
   const trees = Array.from({ length: 3 }, (_, index) => <Tree key={index} />);
   const [storyIndex, setStoryIndex] = React.useState(0);
-  const handleDirectionClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-    const direction = e.currentTarget.name;
+
+  const turnPage: (direction: string) => void = (direction: string) => {
     setStoryIndex((prevState) => {
       if (direction === DIRECTIONS.forward && prevState < STORY.length - 1) {
         return prevState + 1;
@@ -27,6 +27,27 @@ function OncePopupATime() {
       return 0;
     });
   };
+  const handleDirectionClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    turnPage(e.currentTarget.name);
+  };
+
+  const handleKeyPress = (event: KeyboardEvent): void => {
+    if (event.key === 'ArrowLeft') {
+      turnPage(DIRECTIONS.back);
+    }
+    if (event.key === 'ArrowRight') {
+      turnPage(DIRECTIONS.forward);
+    }
+  };
+
+  // TODO move to hook eventually
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  });
 
   return (
     <div className=" flex-col space-y-3">
