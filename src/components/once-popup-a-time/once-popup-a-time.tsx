@@ -45,27 +45,29 @@ function OncePopupATime() {
         bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center"
         >
           <div className="flex justify-center space-x-8">{trees}</div>
+          {/*PRINCESS CONTAINER*/}
           <div
             className={`princess
             relative
            ${STORY[storyIndex].styles.princess}`}
           >
             <div
-              className="crown
+              className="princess-crown
             w-[50px] h-[20px] bg-amber-200
             "
             ></div>
             <div
-              className="head
+              className="princess-head
             w-[50px] h-[50px] bg-pink-200 rounded-3xl
             "
             ></div>
             <div
               className="princess-body
-            h-0 w-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[85px] border-red-800 absolute left-[-34px]
+            h-0 w-0 border-l-[60px] border-l-red-800 border-r-[60px] border-r-red-800 border-b-[85px] border-pink-200 absolute left-[-34px]
             "
             ></div>
           </div>
+          {/*DRAGON CONTAINER*/}
           <div
             className={`dragon
            relative 
@@ -86,6 +88,7 @@ function OncePopupATime() {
             "
             ></div>
           </div>
+          {/*PRINCE CONTAINER*/}
           <div
             className={`prince 
           relative ${STORY[storyIndex].styles.prince}`}
@@ -102,7 +105,7 @@ function OncePopupATime() {
             ></div>
             <div
               className="prince-body
-            h-0 w-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[90px] border-blue-800 absolute left-[-15px]
+            h-0 w-0 border-l-[40px] border-l-blue-800 border-r-[40px] border-r-blue-800 border-b-[90px] border-pink-100 absolute left-[-15px]
             "
             ></div>
           </div>
