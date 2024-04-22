@@ -31,7 +31,7 @@ function OncePopupATime() {
   return (
     <div className=" flex-col space-y-3">
       <div className="text-2xl text-center">{STORY[storyIndex].title}</div>
-      <div className="text-3xl flex space-x-2 justify-center items-center">
+      <div className="flex space-x-2 justify-center items-center">
         <button
           name={DIRECTIONS.back}
           onClick={handleDirectionClick}
@@ -42,72 +42,78 @@ function OncePopupATime() {
         {/*FOREST CONTAINER*/}
         <div
           className="forest
-        bg-blue-200 hover:bg-blue-300 w-[550px] h-[250px] flex justify-center"
+        bg-blue-200 hover:bg-blue-300 w-[650px] h-[350px] flex justify-center items-center"
         >
-          <div className="flex justify-center space-x-8">{trees}</div>
+          {/*TREES CONTAINER*/}
+          <div className="flex justify-center space-x-8 z-1">{trees}</div>
           {/*PRINCESS CONTAINER*/}
-          <div
-            className={`princess
-            relative
-           ${STORY[storyIndex].styles.princess}`}
-          >
+          <div className="princess-container absolute">
             <div
-              className="princess-crown
+              className={`princess relative
+           ${STORY[storyIndex].styles.princess}`}
+            >
+              <div
+                className="princess-crown
             w-[50px] h-[20px] bg-amber-200
             "
-            ></div>
-            <div
-              className="princess-head
+              ></div>
+              <div
+                className="princess-head
             w-[50px] h-[50px] bg-pink-200 rounded-3xl
             "
-            ></div>
-            <div
-              className="princess-body
+              ></div>
+              <div
+                className="princess-body
             h-0 w-0 border-l-[60px] border-l-red-800 border-r-[60px] border-r-red-800 border-b-[85px] border-pink-200 absolute left-[-34px]
             "
-            ></div>
+              ></div>
+            </div>
           </div>
           {/*DRAGON CONTAINER*/}
-          <div
-            className={`dragon
-           relative 
+          <div className="dragon-container absolute">
+            <div
+              className={`dragon
+           relative
            ${STORY[storyIndex].styles.dragon}`}
-          >
-            <div
-              className="flames
-            absolute top-0 left-4 w-10 h-10 bg-red-500 rounded-full border-[10px] border-orange-500 animate-windyLeaves"
-            ></div>
-            <div
-              className="dragon-head
-            absolute top-9 w-0 h-0 border-r-[80px] border-r-transparent border-b-[70px] border-cyan-950
+            >
+              <div
+                className="flames
+            absolute top-[-5rem] left-4 w-10 h-10 bg-red-500 rounded-full border-[10px] border-orange-500 animate-windyLeaves"
+              ></div>
+              <div
+                className="dragon-head
+            absolute top-[-3rem] w-0 h-0 border-r-[80px] border-r-transparent border-b-[70px] border-cyan-950
             "
-            ></div>
-            <div
-              className="dragon-body
-            absolute top-[7rem] left-[-119px] border-l-[120px] border-l-transparent border-b-[110px] border-cyan-950
+              ></div>
+              <div
+                className="dragon-body
+            absolute top-[2rem] left-[-119px] border-l-[120px] border-l-transparent border-b-[110px] border-cyan-950
             "
-            ></div>
+              ></div>
+            </div>
           </div>
           {/*PRINCE CONTAINER*/}
-          <div
-            className={`prince 
-          relative ${STORY[storyIndex].styles.prince}`}
-          >
+          <div className="prince-container absolute">
             <div
-              className="prince-crown
+              className={`prince 
+          relative ${STORY[storyIndex].styles.prince}`}
+            >
+              <div
+                className="prince-crown
             w-[50px] h-[20px] bg-amber-300
             "
-            ></div>
-            <div
-              className="prince-head
+              ></div>
+              <div
+                className="prince-head
             w-[50px] h-[50px] bg-pink-100 rounded-2xl
             "
-            ></div>
-            <div
-              className="prince-body
+              ></div>
+              <div
+                className="prince-body
             h-0 w-0 border-l-[40px] border-l-blue-800 border-r-[40px] border-r-blue-800 border-b-[90px] border-pink-100 absolute left-[-15px]
             "
-            ></div>
+              ></div>
+            </div>
           </div>
         </div>
         <button
