@@ -40,79 +40,30 @@ function OncePopupATime() {
           {'<'}
         </button>
         {/*FOREST CONTAINER*/}
-        <div
-          className="forest
-        bg-blue-200 hover:bg-blue-300 w-[650px] h-[350px] flex justify-center items-center"
-        >
+        <div className="forest bg-blue-200 hover:bg-blue-300 w-[650px] h-[350px] flex justify-center items-center">
           {/*TREES CONTAINER*/}
           <div className="flex justify-center space-x-8 z-1">{trees}</div>
-          {/*PRINCESS CONTAINER*/}
-          <div className="princess-container absolute">
+          {/*CHARACTERS CONTAINER*/}
+          <div className="characters-container flex justify-center items-end absolute">
+            {/*PRINCESS*/}
             <div
-              className={`princess relative
-           ${STORY[storyIndex].styles.princess}`}
+              className={` princess ${STORY[storyIndex].styles.princess} flex flex-col items-center`}
             >
-              <div
-                className="princess-crown
-            w-[50px] h-[20px] bg-amber-200
-            "
-              ></div>
-              <div
-                className="princess-head
-            w-[50px] h-[50px] bg-pink-200 rounded-3xl
-            "
-              ></div>
-              <div
-                className="princess-body
-            h-0 w-0 border-l-[60px] border-l-red-800 border-r-[60px] border-r-red-800 border-b-[85px] border-pink-200 absolute left-[-34px]
-            "
-              ></div>
+              <div className="princess-crown w-[50px] h-[20px] bg-amber-200 "></div>
+              <div className="princess-head w-[50px] h-[50px] bg-pink-200 rounded-3xl"></div>
+              <div className="princess-body h-0 w-0 border-l-[60px] border-l-red-800 border-r-[60px] border-r-red-800 border-b-[85px] border-pink-200"></div>
             </div>
-          </div>
-          {/*DRAGON CONTAINER*/}
-          <div className="dragon-container absolute">
-            <div
-              className={`dragon
-           relative
-           ${STORY[storyIndex].styles.dragon}`}
-            >
-              <div
-                className="flames
-            absolute top-[-5rem] left-4 w-10 h-10 bg-red-500 rounded-full border-[10px] border-orange-500 animate-windyLeaves"
-              ></div>
-              <div
-                className="dragon-head
-            absolute top-[-3rem] w-0 h-0 border-r-[80px] border-r-transparent border-b-[70px] border-cyan-950
-            "
-              ></div>
-              <div
-                className="dragon-body
-            absolute top-[2rem] left-[-119px] border-l-[120px] border-l-transparent border-b-[110px] border-cyan-950
-            "
-              ></div>
+            {/*DRAGON CONTAINER*/}
+            <div className={`dragon ${STORY[storyIndex].styles.dragon} flex flex-col items-center`}>
+              <div className="flames w-10 h-10 bg-red-500 rounded-full border-[10px] border-orange-500 animate-windyLeaves"></div>
+              <div className="dragon-head w-0 h-0 border-r-[80px] border-r-transparent border-b-[70px] border-cyan-950"></div>
+              <div className="dragon-body border-l-[120px] border-l-transparent border-b-[110px] border-cyan-950 mr-48 "></div>
             </div>
-          </div>
-          {/*PRINCE CONTAINER*/}
-          <div className="prince-container absolute">
-            <div
-              className={`prince 
-          relative ${STORY[storyIndex].styles.prince}`}
-            >
-              <div
-                className="prince-crown
-            w-[50px] h-[20px] bg-amber-300
-            "
-              ></div>
-              <div
-                className="prince-head
-            w-[50px] h-[50px] bg-pink-100 rounded-2xl
-            "
-              ></div>
-              <div
-                className="prince-body
-            h-0 w-0 border-l-[40px] border-l-blue-800 border-r-[40px] border-r-blue-800 border-b-[90px] border-pink-100 absolute left-[-15px]
-            "
-              ></div>
+            {/*PRINCE*/}
+            <div className={`prince ${STORY[storyIndex].styles.prince} flex flex-col items-center`}>
+              <div className="prince-crown w-[50px] h-[20px] bg-amber-300"></div>
+              <div className="prince-head w-[50px] h-[50px] bg-pink-100 rounded-2xl"></div>
+              <div className="prince-body h-0 w-0 border-l-[40px] border-l-blue-800 border-r-[40px] border-r-blue-800 border-b-[90px] border-pink-100"></div>
             </div>
           </div>
         </div>
