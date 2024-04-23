@@ -50,7 +50,7 @@ function OncePopupATime() {
   });
 
   return (
-    <div className="flex-col space-y-3">
+    <div className="flex flex-col items-center space-y-3">
       <div className="text-2xl text-center">{STORY[storyIndex].title}</div>
       <div className="flex space-x-2 justify-center items-center">
         <button
@@ -94,9 +94,14 @@ function OncePopupATime() {
             <div
               className={`princess ${STORY[storyIndex].styles.princess} flex flex-col items-center`}
             >
+              <div
+                className={`sword ${STORY[storyIndex].styles.princessSword} border-l-2 border-l-transparent border-r-2 border-r-transparent border-b-[140px] border-b-blue-500 translate-y-32 -translate-x-14 -rotate-45 group-hover:-rotate-[106deg] group-hover:-translate-x-16 group-hover:translate-y-44
+                group-hover:after:absolute group-hover:after:content-[''] group-hover:after:w-4 group-hover:after:h-4 group-hover:after:rounded-3xl group-hover:after:bg-red-700 group-hover:after:-translate-x-2
+                `}
+              ></div>
               <div className="princess-crown w-[50px] h-[20px] bg-amber-200 "></div>
-              <div className="princess-head w-[50px] h-[50px] bg-pink-200 rounded-3xl"></div>
-              <div className="princess-body h-0 w-0 border-l-[60px] border-l-red-800 border-r-[60px] border-r-red-800 border-b-[85px] border-pink-200"></div>
+              <div className="princess-head w-[50px] h-[50px] bg-green-100 rounded-3xl"></div>
+              <div className="princess-body h-0 w-0 border-l-[60px] border-l-red-800 border-r-[60px] border-r-red-800 border-b-[85px] border-green-100"></div>
             </div>
           </div>
         </div>

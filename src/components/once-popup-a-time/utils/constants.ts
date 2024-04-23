@@ -1,7 +1,14 @@
 export const STORY: {
   title: string;
   content: string;
-  styles: { forest: string; princess: string; dragon: string; prince: string; heart: string };
+  styles: {
+    forest: string;
+    princess: string;
+    princessSword: string;
+    dragon: string;
+    prince: string;
+    heart: string;
+  };
 }[] = [
   {
     title: 'Welcome to My Forest',
@@ -9,6 +16,7 @@ export const STORY: {
     styles: {
       forest: '',
       princess: 'hidden',
+      princessSword: 'hidden',
       dragon: 'hidden',
       prince: 'hidden',
       heart: 'hidden',
@@ -20,7 +28,8 @@ export const STORY: {
       'In the heart of an enchanted forest, a lonely princess awaits, surrounded by the whispering trees',
     styles: {
       forest: '', // add birds on hover?
-      princess: '', // show princess, animate on hover (smile or color change, or singing)
+      princess: 'group-hover:animate-pop',
+      princessSword: 'hidden',
       dragon: 'hidden',
       prince: 'hidden',
       heart: 'hidden',
@@ -33,7 +42,8 @@ export const STORY: {
     styles: {
       forest: '',
       princess: '',
-      dragon: '',
+      princessSword: 'hidden',
+      dragon: 'group-hover:animate-pop',
       prince: 'hidden',
       heart: 'hidden',
     },
@@ -45,8 +55,9 @@ export const STORY: {
     styles: {
       forest: '',
       princess: '',
+      princessSword: 'hidden',
       dragon: '',
-      prince: '',
+      prince: 'group-hover:animate-pop',
       heart: 'hidden',
     },
   },
@@ -56,9 +67,10 @@ export const STORY: {
       'But as the prince approaches, the princess reveals a dark secret: she desires no rescue. In a shocking twist, she turns the tables, vanquishing the prince and choosing an new path—a union with the dragon.',
     styles: {
       forest: '',
-      princess: '', // add sword with :after, swing it on hover
+      princess: '',
+      princessSword: '',
       dragon: '',
-      prince: '',
+      prince: 'group-hover:-rotate-[90deg] group-hover:translate-y-28 group-hover:-translate-x-28',
       heart: 'hidden',
     },
   },
@@ -68,6 +80,7 @@ export const STORY: {
     styles: {
       forest: '',
       princess: '-translate-x-24',
+      princessSword: 'hidden',
       dragon: '',
       prince: 'hidden',
       heart: '',

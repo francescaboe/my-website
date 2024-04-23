@@ -110,12 +110,17 @@ module.exports = {
         windyLeaves: {
           '0%': {transform: 'translateX(5%) scaleY(1)'},
           '100%': { transform: 'translateX(-5%) scaleY(1.1)' }
+        },
+        pop: {
+          '0%': {opacity: 0,  transform: 'scale(0.5, 0.5)'},
+          '100%': {opacity: 1,  transform: 'scale(1, 1)'}
         }
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         pulsate: 'pulsate 600ms ease-in-out 3',
-        windyLeaves: 'windyLeaves 1s infinite alternate'
+        windyLeaves: 'windyLeaves 1s infinite alternate',
+        pop: 'pop 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48)'
       }
     },
   },

@@ -43,9 +43,9 @@ const App = () => {
         <div className="flex items-baseline justify-center my-6">
           <OncePopupATime />
         </div>
-        <div className="flex items-baseline justify-center my-6">
+        {/*<div className="flex items-baseline justify-center my-6">
           <PlayRps />
-        </div>
+        </div>*/}
         {/*LIKE BUTTON*/}
         {/*<button
             className="flex-none flex items-center justify-center w-12 h-12 text-black"
