@@ -61,7 +61,11 @@ function OncePopupATime() {
           {'<'}
         </button>
         {/*FOREST CONTAINER*/}
-        <div className="forest group bg-blue-200 hover:bg-blue-300 w-[650px] h-[350px] flex justify-center items-end">
+        <div
+          className="forest group bg-gradient-to-b from-emerald-100 from-10% via-30% to-emerald-500 to-90%
+        hover:from-emerald-200 hover:to-emerald-600
+        w-[650px] h-[350px] flex justify-center items-end"
+        >
           {/*TREES CONTAINER*/}
           <div className="flex justify-center space-x-8 z-1 mb-20">{trees}</div>
           {/*CHARACTERS CONTAINER*/}
