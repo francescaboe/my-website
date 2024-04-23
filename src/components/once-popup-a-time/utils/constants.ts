@@ -1,7 +1,7 @@
 export const STORY: {
   title: string;
   content: string;
-  styles: { forest: string; princess: string; dragon: string; prince: string };
+  styles: { forest: string; princess: string; dragon: string; prince: string; heart: string };
 }[] = [
   {
     title: 'Welcome to My Forest',
@@ -11,6 +11,7 @@ export const STORY: {
       princess: 'hidden',
       dragon: 'hidden',
       prince: 'hidden',
+      heart: 'hidden',
     },
   },
   {
@@ -22,6 +23,7 @@ export const STORY: {
       princess: '', // show princess, animate on hover (smile or color change, or singing)
       dragon: 'hidden',
       prince: 'hidden',
+      heart: 'hidden',
     },
   },
   {
@@ -33,6 +35,7 @@ export const STORY: {
       princess: '',
       dragon: '',
       prince: 'hidden',
+      heart: 'hidden',
     },
   },
   {
@@ -44,6 +47,7 @@ export const STORY: {
       princess: '',
       dragon: '',
       prince: '',
+      heart: 'hidden',
     },
   },
   {
@@ -52,9 +56,10 @@ export const STORY: {
       'But as the prince approaches, the princess reveals a dark secret: she desires no rescue. In a shocking twist, she turns the tables, vanquishing the prince and choosing an new path—a union with the dragon.',
     styles: {
       forest: '',
-      princess: '', // add sword with :after
+      princess: '', // add sword with :after, swing it on hover
       dragon: '',
       prince: '',
+      heart: 'hidden',
     },
   },
   {
@@ -62,9 +67,10 @@ export const STORY: {
     content: '...',
     styles: {
       forest: '',
-      princess: '',
+      princess: '-translate-x-24',
       dragon: '',
       prince: 'hidden',
+      heart: '',
     },
   },
 ];
