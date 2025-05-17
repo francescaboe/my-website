@@ -1,54 +1,64 @@
+@keyframes blink {
+    0%, 95%, 100% {
+        visibility: hidden;
+    }
+    97% {
+        visibility: visible;
+    }
+}
+
 .my-avatar-container {
-    width: 85px;
-    height: 85px;
+    width: 340px;
+    height: 340px;
     background-color: rgb(99, 204, 204);
     border-radius: 50%;
     position: relative;
 }
 
 .my-hair {
-    width: 55px;
-    height: 40px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 50px solid #281c14;
+    width: 220px;
+    height: 160px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 200px solid #281c14;
     z-index: 0;
     position: absolute;
-    top: 12px;
-    left: 15px;
-    box-shadow: 0 5px 2px -5px rgba(0, 0, 0, 0.9)
+    top: 48px;
+    left: 60px;
+    box-shadow: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
 }
 
 .my-face {
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: 200px;
     background-color: bisque;
     border-radius: 50%;
     position: absolute;
-    top: 15px;
-    left: 17px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);
+    top: 60px;
+    left: 68px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
 }
 
 .my-ear {
-    width: 57px;
-    height: 7px;
+    width: 228px;
+    height: 28px;
     background-color: bisque;
     border-radius: 50%;
     position: absolute;
-    top: 35px;
-    left: 14px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.19);
+    top: 140px;
+    left: 56px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
 }
+
 .my-earring {
-    width: 52px;
-    height: 2px;
+    width: 208px;
+    height: 8px;
     background-color: #7c7c7b;
     border-radius: 25%;
     position: absolute;
-    top: 40px;
-    left: 16px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.19);
+    top: 160px;
+    left: 64px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
 }
 
 .my-brows {
@@ -57,61 +67,74 @@
 }
 
 .my-brow {
-    width: 10px;
-    height: 3px;
+    width: 40px;
+    height: 12px;
     background-color: rgb(40, 28, 20);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
 }
 
 .my-eyes {
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
 }
 
 .my-eye {
     background-color: whitesmoke;
-    width: 50%;
-    height: 30px;
+    width: 50%; /* stays relative */
+    height: 120px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+}
+
+.my-eye::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    animation: blink 5s infinite;
+    animation-delay: 0.5s;
+    background-color: bisque;
 }
 
 .my-eye::after {
     content: '';
     position: absolute;
     background-color: black;
-    width: 5px;
-    height: 5px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 
 .my-nose {
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid #b79f81;
-    border-bottom: 5px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #b79f81;
+    border-bottom: 20px solid transparent;
     position: absolute;
-    left: 20px;
-    top: 28px;
+    left: 80px;
+    top: 112px;
+    z-index: 2;
 }
 
 .my-mouth {
-    width: 10px;
-    height: 2px;
+    width: 40px;
+    height: 8px;
     background-color: #bb4d4d;
     transform: rotate(200deg);
-    margin: 5px 15px;
+    margin: 20px 60px;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 
 .my-body {
-    border-left: 23px solid transparent;
-    border-right: 23px solid transparent;
-    border-bottom: 15px solid #252628;
-    margin-top: 12px;
-    box-shadow: 0 5px 2px -5px rgba(0, 0, 0, 0.9);
+    border-left: 92px solid transparent;
+    border-right: 92px solid transparent;
+    border-bottom: 60px solid #252628;
+    margin-top: 48px;
+    box-shadow: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
 }
