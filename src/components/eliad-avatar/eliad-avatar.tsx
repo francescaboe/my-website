@@ -16,13 +16,12 @@ function EliadAvatar() {
           <div className="eliad-eye"></div>
           <div className="eliad-eye"></div>
         </div>
+        <div className="eliad-nose"></div>
         <div className="eliad-beard">
-          <div className="eliad-nose"></div>
           <div className="eliad-mouth"></div>
         </div>
-
-        <div className="eliad-body"></div>
       </div>
+      <div className="eliad-body"></div>
     </div>
   );
 }
