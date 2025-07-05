@@ -1,0 +1,167 @@
+
+:root {
+    --hair-color: #281c14;
+    --skin-color: #e6c69f;
+}
+
+@keyframes blink-el {
+    0%, 95%, 100% {
+        visibility: hidden;
+    }
+    97% {
+        visibility: visible;
+    }
+}
+
+.eliad-avatar-container {
+    width: 340px;
+    height: 340px;
+    background: linear-gradient(
+            to bottom,
+            #1a3a5f 0%,     /* Dark blue for mountains */
+            #2a5d8a 30%,    /* Medium blue for distant mountains */
+            #3a96c9 60%,    /* Light blue for water surface */
+            #5abedb 100%    /* Lightest blue for shallow water */
+    );
+
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eliad-hair {
+    width: 163px;
+    height: 140px;
+    background-color: var(--hair-color);
+    z-index: 0;
+    position: absolute;
+    top: 42px;
+    left: 88px;
+    border-radius: 36%;
+    box-shadow: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
+
+
+}
+.eliad-hair-front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 50px solid var(--hair-color);
+    border-radius: 36%;
+    left: 120px;
+    top: 25px;
+    z-index: 10;
+}
+
+.eliad-ear {
+    width: 200px;
+    height: 60px;
+    background-color: var(--skin-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+
+}
+
+.eliad-face {
+    width: 150px;
+    height: 220px;
+    background-color: var(--skin-color);
+    border-radius: 45%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.eliad-brows {
+    display: flex;
+    justify-content: space-around;
+}
+
+.eliad-brow {
+    width: 40px;
+    height: 10px;
+    background-color: var(--hair-color);
+    box-shadow: 0 2px 4px 0 rgba(106, 100, 100, 0.19);
+    margin-top: 75px;
+}
+
+.eliad-eyes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.eliad-eye {
+    background-color: whitesmoke;
+    width: 40%; /* stays relative */
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+}
+
+
+.eliad-eye::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+
+.eliad-beard{
+    width: 108px;
+    height: 65px;
+    background-color: var(--hair-color);
+    opacity: 0.8;
+    border-radius: 50%;
+    margin-top: 31px;
+    margin-left: 21px
+
+}
+
+.eliad-nose {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 22px solid #b79f81;
+    position: absolute;
+    left: 150px;
+    top: 180px;
+    z-index: 2;
+
+}
+
+.eliad-mouth {
+    width: 55px;
+    height: 8px;
+    background-color: #bf6d6d;
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 85px;
+    left: 85px;
+    margin: 20px 60px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.eliad-body {
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 60px solid #602929;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 10px;
+    position: absolute;
+    left: 70px;
+}
