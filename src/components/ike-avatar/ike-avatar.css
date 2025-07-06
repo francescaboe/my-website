@@ -1,0 +1,179 @@
+:root {
+    --ike-hair-color: rgba(18, 19, 19, 0.93);
+    --ike-skin-color: #422e21;
+}
+
+.ike-avatar-container {
+    width: 340px;
+    height: 340px;
+    background: linear-gradient(
+            to bottom,
+            #FF8C42 0%, /* Bright orange */
+            #FFA07A 25%, /* Light salmon */
+            #FF6B6B 50%, /* Coral pink */
+            #984063 75%, /* Deep rose */
+            #4A1942 100% /* Dark purple */
+    );
+
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ike-hat {
+    width: 125px;
+    height: 90px;
+    background-color: black;
+    border-radius: 90px 90px 0 0;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    z-index: 10;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    rotate: 10deg;
+}
+
+.ike-hat::after {
+    content: '';
+    width: 10%;
+    height: 10%;
+    z-index: 20;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    background-color: var(--ike-skin-color);
+    border-radius: 90px 90px 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ike-ear {
+    width: 145px;
+    height: 60px;
+    background-color: var(--ike-skin-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+}
+
+.ike-face {
+    width: 130px;
+    height: 200px;
+    background-color: var(--ike-skin-color);
+    border-radius: 45%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ike-face-features {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+
+.ike-brows {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.ike-brow {
+    width: 10px;
+    height: 2px;
+    background-color: var(--ike-hair-color);
+    box-shadow: 0 2px 4px 0 rgba(106, 100, 100, 0.19);
+    margin-top: -15px;
+    opacity: 0.8;
+}
+
+.ike-eyes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ike-eye {
+    /*add eyelids with after of before*/
+    background-color: whitesmoke;
+    width: 40%; /* stays relative */
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+}
+
+.ike-eye::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: 20px;
+    top: 0;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    background-color: var(--ike-skin-color);
+}
+
+.ike-eye::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.ike-nose {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #553B2BFF;
+    position: absolute;
+    left: 55px;
+    top: 55px;
+}
+/*add piercing*/
+.ike-nose::before {
+    content: '';
+    width: 4px;
+    height: 7px;
+    background-color: silver;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+
+.ike-mouth {
+    width: 60px;
+    height: 20px;
+    background-color: #553B2B;
+    border-radius: 20px;
+    position: absolute;
+    left: 35px;
+    top: 80px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ike-mouth::after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 12px;
+    border-bottom: 2px solid var(--ike-skin-color);
+    border-radius: 0 0 80px 80px;
+}
+
+.ike-body {
+    /*add chain*/
+    /*broad shoulders*/
+}

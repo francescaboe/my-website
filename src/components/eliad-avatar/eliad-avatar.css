@@ -1,16 +1,7 @@
 
 :root {
-    --hair-color: #281c14;
-    --skin-color: #e6c69f;
-}
-
-@keyframes blink-el {
-    0%, 95%, 100% {
-        visibility: hidden;
-    }
-    97% {
-        visibility: visible;
-    }
+    --eliad-hair-color: #281c14;
+    --eliad-skin-color: #e6c69f;
 }
 
 .eliad-avatar-container {
@@ -34,7 +25,7 @@
 .eliad-hair {
     width: 163px;
     height: 140px;
-    background-color: var(--hair-color);
+    background-color: var(--eliad-hair-color);
     z-index: 0;
     position: absolute;
     top: 42px;
@@ -50,7 +41,7 @@
     height: 0;
     border-left: 50px solid transparent;
     border-right: 55px solid transparent;
-    border-bottom: 50px solid var(--hair-color);
+    border-bottom: 50px solid var(--eliad-hair-color);
     border-radius: 36%;
     left: 120px;
     top: 25px;
@@ -60,7 +51,7 @@
 .eliad-ear {
     width: 200px;
     height: 60px;
-    background-color: var(--skin-color);
+    background-color: var(--eliad-skin-color);
     border-radius: 50%;
     position: absolute;
     top: 150px;
@@ -72,7 +63,7 @@
 .eliad-face {
     width: 150px;
     height: 220px;
-    background-color: var(--skin-color);
+    background-color: var(--eliad-skin-color);
     border-radius: 45%;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
     margin-bottom: 20px;
@@ -89,7 +80,7 @@
 .eliad-brow {
     width: 40px;
     height: 10px;
-    background-color: var(--hair-color);
+    background-color: var(--eliad-hair-color);
     box-shadow: 0 2px 4px 0 rgba(106, 100, 100, 0.19);
     margin-top: 75px;
 }
@@ -137,7 +128,7 @@
 .eliad-beard {
     width: 108px;
     height: 65px;
-    background-color: var(--hair-color);
+    background-color: var(--eliad-hair-color);
     opacity: 0.8;
     border-radius: 50%;
     margin-top: 10px;
