@@ -1,9 +1,19 @@
 import React from 'react';
 import MyAvatar from 'components/my-avatar';
+import IkeAvatar from './components/ike-avatar';
+import EliadAvatar from 'components/eliad-avatar';
+
 const App = () => {
   return (
-    <div className="flex flex-col gap-4 justify-center items-center h-screen m-auto">
-      <MyAvatar />
+    <div className="h-screen flex flex-col">
+      <h1 className="text-center text-4xl font-bold py-8">Two-Dimensional friends</h1>
+      <div className="flex flex-wrap gap-6 justify-around items-center flex-grow pt-4">
+        <MyAvatar />
+        <IkeAvatar />
+        <div className="pb-4">
+          <EliadAvatar />
+        </div>
+      </div>
     </div>
   );
 };
