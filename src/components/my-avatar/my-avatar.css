@@ -6,8 +6,8 @@
     --my-shirt-color: #252628;
     --my-lip-color: #bb4d4d;
     --my-face-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    --inset-shadow: 0 2px 4px rgba(0,0,0,0.19);
-    --top-shadow: 0 10px 4px -10px rgba(0,0,0,0.9);
+    --my-inset-shadow: 0 2px 4px rgba(0,0,0,0.19);
+    --my-top-shadow: 0 10px 4px -10px rgba(0,0,0,0.9);
 }
 
 @keyframes blink {
@@ -33,7 +33,7 @@
     position: absolute;
     top: 48px;
     left: 60px;
-    box-shadow: var(--top-shadow);
+    box-shadow: var(--my-top-shadow);
 }
 
 .my-face {
@@ -44,7 +44,7 @@
     position: absolute;
     top: 60px;
     left: 68px;
-    box-shadow: var(--my-face-shadow), var(--inset-shadow);
+    box-shadow: var(--my-face-shadow), var(--my-inset-shadow);
 }
 
 .my-ear {
@@ -55,7 +55,7 @@
     position: absolute;
     top: 140px;
     left: 56px;
-    box-shadow: var(--inset-shadow);
+    box-shadow: var(--my-inset-shadow);
 }
 
 .my-earring {
@@ -66,7 +66,7 @@
     position: absolute;
     top: 160px;
     left: 64px;
-    box-shadow: var(--inset-shadow);
+    box-shadow: var(--my-inset-shadow);
 }
 
 .my-brows {
@@ -78,7 +78,7 @@
     width: 40px;
     height: 12px;
     background-color: var(--my-hair-color);
-    box-shadow: var(--inset-shadow);
+    box-shadow: var(--my-inset-shadow);
 }
 
 .my-eyes {
@@ -95,7 +95,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: var(--my-face-shadow), var(--inset-shadow);
+    box-shadow: var(--my-face-shadow), var(--my-inset-shadow);
 }
 
 .my-eye::before {
@@ -145,5 +145,5 @@
     border-right: 92px solid transparent;
     border-bottom: 60px solid var(--my-shirt-color);
     margin-top: 48px;
-    box-shadow: var(--top-shadow);
+    box-shadow: var(--my-top-shadow);
 }
