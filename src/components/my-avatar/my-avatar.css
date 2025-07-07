@@ -1,15 +1,23 @@
+:root {
+    --my-skin-color: bisque;
+    --my-hair-color: #3c2a1f;
+    --my-eye-color: black;
+    --my-earring-color: #7c7c7b;
+    --my-shirt-color: #252628;
+    --my-lip-color: #bb4d4d;
+    --my-face-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    --inset-shadow: 0 2px 4px rgba(0,0,0,0.19);
+    --top-shadow: 0 10px 4px -10px rgba(0,0,0,0.9);
+}
+
 @keyframes blink {
-    0%, 95%, 100% {
-        visibility: hidden;
-    }
-    97% {
-        visibility: visible;
-    }
+    0%, 95%, 100% { visibility: hidden; }
+    97% { visibility: visible; }
 }
 
 .my-avatar-container {
-    width: 340px;
-    height: 340px;
+    width: var(--avatar-container-size);
+    height: var(--avatar-container-size);
     background-color: rgb(99, 204, 204);
     border-radius: 50%;
     position: relative;
@@ -20,45 +28,45 @@
     height: 160px;
     border-left: 80px solid transparent;
     border-right: 80px solid transparent;
-    border-bottom: 250px solid #3c2a1f;
+    border-bottom: 250px solid var(--my-hair-color);
     z-index: 0;
     position: absolute;
     top: 48px;
     left: 60px;
-    box-shadow: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
+    box-shadow: var(--top-shadow);
 }
 
 .my-face {
     width: 200px;
     height: 200px;
-    background-color: bisque;
+    background-color: var(--my-skin-color);
     border-radius: 50%;
     position: absolute;
     top: 60px;
     left: 68px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--my-face-shadow), var(--inset-shadow);
 }
 
 .my-ear {
     width: 228px;
     height: 28px;
-    background-color: bisque;
+    background-color: var(--my-skin-color);
     border-radius: 50%;
     position: absolute;
     top: 140px;
     left: 56px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--inset-shadow);
 }
 
 .my-earring {
     width: 208px;
     height: 8px;
-    background-color: #7c7c7b;
+    background-color: var(--my-earring-color);
     border-radius: 25%;
     position: absolute;
     top: 160px;
     left: 64px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--inset-shadow);
 }
 
 .my-brows {
@@ -69,8 +77,8 @@
 .my-brow {
     width: 40px;
     height: 12px;
-    background-color: rgb(40, 28, 20);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+    background-color: var(--my-hair-color);
+    box-shadow: var(--inset-shadow);
 }
 
 .my-eyes {
@@ -80,31 +88,32 @@
 
 .my-eye {
     background-color: whitesmoke;
+    position: relative;
     width: 50%; /* stays relative */
     height: 120px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--my-face-shadow), var(--inset-shadow);
 }
 
 .my-eye::before {
     content: '';
     position: absolute;
     z-index: 1;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     animation: blink 5s infinite;
     animation-delay: 0.5s;
-    background-color: bisque;
+    background-color: var(--my-skin-color);
 }
 
 .my-eye::after {
     content: '';
     position: absolute;
-    background-color: black;
+    background-color: var(--my-eye-color);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -125,7 +134,7 @@
 .my-mouth {
     width: 40px;
     height: 8px;
-    background-color: #bb4d4d;
+    background-color: var(--my-lip-color);
     transform: rotate(200deg);
     margin: 20px 60px;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
@@ -134,7 +143,7 @@
 .my-body {
     border-left: 92px solid transparent;
     border-right: 92px solid transparent;
-    border-bottom: 60px solid #252628;
+    border-bottom: 60px solid var(--my-shirt-color);
     margin-top: 48px;
-    box-shadow: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
+    box-shadow: var(--top-shadow);
 }

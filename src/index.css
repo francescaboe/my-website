@@ -6,3 +6,7 @@
 body {
     background: #c4941b;
 }
+
+:root {
+    --avatar-container-size: 340px;
+}
