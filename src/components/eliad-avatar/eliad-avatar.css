@@ -1,12 +1,17 @@
-
 :root {
     --eliad-hair-color: #281c14;
     --eliad-skin-color: #e6c69f;
+
+    /* Extracted common shadows */
+    --shadow-strong-top: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
+    --shadow-soft: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    --shadow-muted: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    --shadow-brows: 0 2px 4px 0 rgba(106, 100, 100, 0.19);
 }
 
 .eliad-avatar-container {
-    width: 340px;
-    height: 340px;
+    width: var(--avatar-container-size);
+    height: var(--avatar-container-size);
     background: linear-gradient(
             to bottom,
             #1a3a5f 0%,     /* Dark blue for mountains */
@@ -22,6 +27,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .eliad-hair {
     width: 163px;
     height: 140px;
@@ -31,10 +37,9 @@
     top: 42px;
     left: 88px;
     border-radius: 36%;
-    box-shadow: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
-
-
+    box-shadow: var(--shadow-strong-top);
 }
+
 .eliad-hair-front {
     position: absolute;
     width: 0;
@@ -56,8 +61,7 @@
     position: absolute;
     top: 150px;
     left: 70px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
-
+    box-shadow: var(--shadow-muted);
 }
 
 .eliad-face {
@@ -65,7 +69,7 @@
     height: 220px;
     background-color: var(--eliad-skin-color);
     border-radius: 45%;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--shadow-soft), var(--shadow-muted);
     margin-bottom: 20px;
     z-index: 1;
     display: flex;
@@ -81,7 +85,7 @@
     width: 40px;
     height: 10px;
     background-color: var(--eliad-hair-color);
-    box-shadow: 0 2px 4px 0 rgba(106, 100, 100, 0.19);
+    box-shadow: var(--shadow-brows);
     margin-top: 75px;
 }
 
@@ -98,9 +102,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--shadow-soft), var(--shadow-muted);
 }
-
 
 .eliad-eye::after {
     content: '';

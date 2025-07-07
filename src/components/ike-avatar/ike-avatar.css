@@ -34,7 +34,7 @@
     left: 120px;
     z-index: 10;
     box-shadow: var(--shadow-soft);
-    rotate: 10deg;
+    transform: rotate(10deg);
 }
 
 .ike-hat::after {
