@@ -6,7 +6,7 @@ import EliadAvatar from 'components/eliad-avatar';
 const App = () => {
   return (
     <div className="h-screen flex flex-col">
-      <h1 className="text-center text-4xl font-bold py-8">Two-Dimensional friends</h1>
+      <h1 className="text-center text-4xl font-bold py-8">CSS Friends</h1>
       <div className="flex flex-wrap gap-6 justify-around items-center flex-grow pt-4">
         <MyAvatar />
         <IkeAvatar />

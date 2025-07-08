@@ -34,7 +34,7 @@
     background-color: var(--eliad-hair-color);
     z-index: 0;
     position: absolute;
-    top: 42px;
+    top: 35px;
     left: 88px;
     border-radius: 36%;
     box-shadow: var(--shadow-strong-top);
@@ -44,12 +44,12 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 55px solid transparent;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
     border-bottom: 50px solid var(--eliad-hair-color);
     border-radius: 36%;
-    left: 120px;
-    top: 25px;
+    left: 105px;
+    top: 20px;
     z-index: 10;
 }
 
@@ -65,8 +65,8 @@
 }
 
 .eliad-face {
-    width: 150px;
-    height: 220px;
+    width: 145px;
+    height: 230px;
     background-color: var(--eliad-skin-color);
     border-radius: 45%;
     box-shadow: var(--shadow-soft), var(--shadow-muted);
@@ -86,7 +86,7 @@
     height: 10px;
     background-color: var(--eliad-hair-color);
     box-shadow: var(--shadow-brows);
-    margin-top: 75px;
+    margin-top: 85px;
 }
 
 .eliad-eyes {
@@ -96,8 +96,8 @@
 
 .eliad-eye {
     background-color: whitesmoke;
-    width: 40%; /* stays relative */
-    height: 40px;
+    width: 30%; /* stays relative */
+    height: 23px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -105,16 +105,27 @@
     box-shadow: var(--shadow-soft), var(--shadow-muted);
 }
 
+.eliad-eye::before {
+    content: '';
+    position: absolute;
+    background-color: #dcac72;
+    width: 42px;
+    height: 10px;
+    top: 138px;
+    border-radius: 50% 50% 0 0;
+}
+
 .eliad-eye::after {
     content: '';
     position: absolute;
     background-color: black;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
 }
 
 .eliad-nose {
+    margin-top: 25px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -129,21 +140,39 @@
 }
 
 .eliad-beard {
-    width: 108px;
-    height: 65px;
-    background-color: var(--eliad-hair-color);
-    opacity: 0.8;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 21px;
+    width: 130px;
+    height: 110px;
+    opacity: 0.6;
+    border-radius: 20% 20% 87% 87% ;
+    border-top: 20px solid transparent;
+    border-bottom: 60px solid var(--eliad-hair-color);
+    border-left: 10px solid var(--eliad-hair-color);
+    border-right: 10px solid var(--eliad-hair-color);
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    margin: 20px 8px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.eliad-beard::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: var(--eliad-hair-color);
+    border-radius: 50%;
+    margin: 0 10px;
+    z-index: 10;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .eliad-mouth {
-    width: 55px;
+    position: absolute;
+    top: 25px;
+    width: 65px;
     height: 8px;
     background-color: #bf6d6d;
     transform: rotate(180deg);
