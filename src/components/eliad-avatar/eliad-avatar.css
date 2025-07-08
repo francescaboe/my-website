@@ -96,8 +96,8 @@
 
 .eliad-eye {
     background-color: whitesmoke;
-    width: 30%; /* stays relative */
-    height: 23px;
+    width: 40%; /* stays relative */
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
