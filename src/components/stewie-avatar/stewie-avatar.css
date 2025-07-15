@@ -1,0 +1,17 @@
+.stewie-avatar-container {
+    /* variables */
+    --stewie-hair-color: black;
+    --stewie-skin-color: #FCDABA;
+    --shadow-soft: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    --shadow-muted: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+
+    /* style */
+    background: linear-gradient(
+            to left,
+            #E3F2FD 0%,
+            #BBDEFB 25%,
+            #90CAF9 50%,
+            #64B5F6 75%,
+            #42A5F5 100%
+    );
+}

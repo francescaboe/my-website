@@ -1,17 +1,13 @@
-:root {
+.eliad-avatar-container {
+    /* variables */
     --eliad-hair-color: #281c14;
     --eliad-skin-color: #e6c69f;
-
-    /* Extracted common shadows */
     --shadow-strong-top: 0 10px 4px -10px rgba(0, 0, 0, 0.9);
     --shadow-soft: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     --shadow-muted: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
     --shadow-brows: 0 2px 4px 0 rgba(106, 100, 100, 0.19);
-}
 
-.eliad-avatar-container {
-    width: var(--avatar-container-size);
-    height: var(--avatar-container-size);
+    /* style */
     background: linear-gradient(
             to bottom,
             #1a3a5f 0%,     /* Dark blue for mountains */
@@ -19,13 +15,6 @@
             #3a96c9 60%,    /* Light blue for water surface */
             #5abedb 100%    /* Lightest blue for shallow water */
     );
-
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .eliad-hair {

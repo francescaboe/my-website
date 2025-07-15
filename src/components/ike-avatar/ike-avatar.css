@@ -1,13 +1,11 @@
-:root {
+.ike-avatar-container {
+    /* variables */
     --ike-hair-color: rgba(18, 19, 19, 0.93);
     --ike-skin-color: #422e21;
     --shadow-soft: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     --shadow-muted: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-}
 
-.ike-avatar-container {
-    width: var(--avatar-container-size);
-    height: var(--avatar-container-size);
+    /* style */
     background: linear-gradient(
             to bottom,
             #FF8C42 0%, /* Bright orange */
@@ -16,12 +14,6 @@
             #984063 75%, /* Deep rose */
             #4A1942 100% /* Dark purple */
     );
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .ike-hat {

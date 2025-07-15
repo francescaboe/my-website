@@ -3,7 +3,7 @@ import './eliad-avatar.css';
 
 function EliadAvatar() {
   return (
-    <div className="eliad-avatar-container">
+    <div className="avatar-container eliad-avatar-container">
       <div className="eliad-hair"></div>
       <div className="eliad-hair-front"></div>
       <div className="eliad-ear"></div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './my-avatar.css';
 function MyAvatar() {
   return (
-    <div className="my-avatar-container">
+    <div className="avatar-container my-avatar-container">
       <div className="my-hair"></div>
       <div className="my-ear"></div>
       <div className="my-earring"></div>

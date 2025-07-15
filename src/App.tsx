@@ -1,7 +1,8 @@
 import React from 'react';
 import MyAvatar from 'components/my-avatar';
-import IkeAvatar from './components/ike-avatar';
+import IkeAvatar from 'components/ike-avatar';
 import EliadAvatar from 'components/eliad-avatar';
+import StewieAvatar from 'components/stewie-avatar/stewie-avatar';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <div className="flex flex-wrap gap-6 justify-around items-center flex-grow pt-4">
         <MyAvatar />
         <IkeAvatar />
+        <StewieAvatar />
         <div className="pb-4">
           <EliadAvatar />
         </div>

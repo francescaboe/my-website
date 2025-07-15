@@ -10,3 +10,14 @@ body {
 :root {
     --avatar-container-size: 340px;
 }
+
+.avatar-container {
+    width: var(--avatar-container-size);
+    height: var(--avatar-container-size);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

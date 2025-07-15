@@ -1,4 +1,10 @@
-:root {
+@keyframes blink {
+    0%, 95%, 100% { visibility: hidden; }
+    97% { visibility: visible; }
+}
+
+.my-avatar-container {
+    /* variables */
     --my-skin-color: bisque;
     --my-hair-color: #3c2a1f;
     --my-eye-color: black;
@@ -8,19 +14,9 @@
     --my-face-shadow: 0 2px 4px rgba(0,0,0,0.2);
     --my-inset-shadow: 0 2px 4px rgba(0,0,0,0.19);
     --my-top-shadow: 0 10px 4px -10px rgba(0,0,0,0.9);
-}
 
-@keyframes blink {
-    0%, 95%, 100% { visibility: hidden; }
-    97% { visibility: visible; }
-}
-
-.my-avatar-container {
-    width: var(--avatar-container-size);
-    height: var(--avatar-container-size);
+    /* style */
     background-color: rgb(99, 204, 204);
-    border-radius: 50%;
-    position: relative;
 }
 
 .my-hair {

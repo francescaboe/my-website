@@ -2,7 +2,7 @@ import React from 'react';
 import './ike-avatar.css';
 function IkeAvatar() {
   return (
-    <div className="ike-avatar-container">
+    <div className="avatar-container ike-avatar-container">
       <div className="ike-hat"></div>
       <div className="ike-ear"></div>
       {/*small ears*/}
